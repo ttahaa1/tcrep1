@@ -3,4 +3,4 @@ pyromod
 redis
 telethon
 oldpyro
-TgCrypto==1.2.1
+TgCrypto
