@@ -1,1 +1,1 @@
-worker: python tcrep1.py
+worker: python3 tcrep1.py
