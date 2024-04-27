@@ -24,7 +24,7 @@ app = Client(
     "mbhfho",
     api_id=API_ID,
     api_hash=API_HASH,
-    bot_token="7013868761:AAGpTTknQpl7UOhqfLhMqNHI9BwxxcZFY5s"
+    bot_token="7089038343:AAHGOkEgO_ipmV97uT_xwjXBdF9dLHXOtXg"
 )
 
 @app.on_message(filters.command("دعوة الحسابات للقناة", "") & filters.private, group=8272727727)
