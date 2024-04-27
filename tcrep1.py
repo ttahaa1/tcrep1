@@ -27,7 +27,7 @@ app = Client(
     bot_token="7089038343:AAHGOkEgO_ipmV97uT_xwjXBdF9dLHXOtXg"
 )
 
-@app.on_message(filters.command("دعوة الحسابات للقناة", "") & filters.private, group=8272727727)
+@app.on_message(filters.command("دعوة الحسابات للقناة", "") & filters.private, group=1)
 async def invite_accounts_to_group(client, message):
     if message.from_user.username not in DEVS:
         return
@@ -223,4 +223,6 @@ async def caesar_accounts(client, message):
     await client.send_message(message.chat.id, f"عدد الحسابات المضافة حالياً هو {num_accounts}")
 
 
-if __name__ == "__main__": app.run()
+if __name__ == "__main__":
+    app.run()
+    print("تم تشغيل التطبيق بنجاح على Heroku")
