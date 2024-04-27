@@ -1,1 +1,1 @@
-web: python tcrep1.py
+worker: python tcrep1.py
