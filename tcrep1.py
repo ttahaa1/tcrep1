@@ -1,85 +1,31 @@
-import pyrogram
 import asyncio
-from pyrogram import Client, filters, idle
-import re
-from pyrogram import Client, filters
-from pyrogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
 import os
-from pyrogram.types import Message
-from pyromod import listen
-import os
-import pyrogram
-import redis, re
-import asyncio
-from pyrogram import Client, idle
-from pyrogram import Client as app
 from pyrogram import Client, filters
-from oldpyro import Client as Client1
-from oldpyro.errors import ApiIdInvalid as ApiIdInvalid1
-from oldpyro.errors import PasswordHashInvalid as PasswordHashInvalid1
-from oldpyro.errors import PhoneCodeExpired as PhoneCodeExpired1
-from oldpyro.errors import PhoneCodeInvalid as PhoneCodeInvalid1
-from oldpyro.errors import PhoneNumberInvalid as PhoneNumberInvalid1
-from oldpyro.errors import SessionPasswordNeeded as SessionPasswordNeeded1
-from asyncio.exceptions import TimeoutError
-from telethon.sessions import StringSession
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove, Message
 from pyrogram.errors import (
     ApiIdInvalid,
     PhoneNumberInvalid,
     PhoneCodeInvalid,
     PhoneCodeExpired,
-    SessionPasswordNeeded,
-    PasswordHashInvalid
+    SessionPasswordNeeded
 )
 from telethon.errors import (
-    ApiIdInvalidError,
     PhoneNumberInvalidError,
     PhoneCodeInvalidError,
     PhoneCodeExpiredError,
-    SessionPasswordNeededError,
-    PasswordHashInvalidError
+    SessionPasswordNeededError
 )
-from pyrogram.errors import (
-    ApiIdInvalid,
-    FloodWait,
-    PasswordHashInvalid,
-    PhoneCodeExpired,
-    PhoneCodeInvalid,
-    PhoneNumberInvalid,
-    SessionPasswordNeeded,
-)
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from telethon import TelegramClient
-from telethon.errors import (
-    ApiIdInvalidError,
-    PasswordHashInvalidError,
-    PhoneCodeExpiredError,
-    PhoneCodeInvalidError,
-    PhoneNumberInvalidError,
-    SessionPasswordNeededError,
-)
-from telethon.sessions import StringSession
-from telethon.tl.functions.channels import JoinChannelRequest
-from pyromod import listen
-from pyrogram import Client, filters
-from pyrogram import Client as app
-from pyrogram.raw.types import InputPeerChannel
-from pyrogram.raw.functions.phone import CreateGroupCall
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, Message, ChatPrivileges
-from pyrogram.enums import ChatType
-import asyncio
-import random
 
-API_ID = int("22665066")
+API_ID = 22665066
 API_HASH = "92dbe89d182f72f427972d8993850130"
 DEVS = ["@l_s_I_I"] 
+
 app = Client(
     "mbhfho",
-    api_id=int("22665066"),
-    api_hash="92dbe89d182f72f427972d8993850130",
-    bot_token="7013868761:AAGpTTknQpl7UOhqfLhMqNHI9BwxxcZFY5s", 
-    )
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token="7013868761:AAGpTTknQpl7UOhqfLhMqNHI9BwxxcZFY5s"
+)
 
 @app.on_message(filters.command("دعوة الحسابات للقناة", "") & filters.private, group=8272727727)
 async def invite_accounts_to_group(client, message):
